@@ -1,0 +1,83 @@
+[{
+  "_id": {
+    "$oid": "63ddc3d2bb5e6145934d0e11"
+  },
+  "lastName": "鈴木",
+  "firstName": "太郎",
+  "lastNameKana": "すずき",
+  "firstNameKana": "たろう",
+  "email": "taro@gmail.com",
+  "password": "password",
+  "department": "IS",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675477970152"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675479479003"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddc409bb5e6145934d0e15"
+  },
+  "lastName": "間宮",
+  "firstName": "漱一朗",
+  "lastNameKana": "そういちろう",
+  "firstNameKana": "まみや",
+  "email": "soichiro@gmail.com",
+  "password": "password",
+  "department": "プロダクト開発",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675478025330"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675478025330"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddc8ec6fbd462255f06259"
+  },
+  "lastName": "田中",
+  "firstName": "角栄",
+  "email": "tanaka@gmail.com",
+  "password": "password",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675479276444"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675479276444"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddc915ebb6dba99b590c18"
+  },
+  "lastName": "田中",
+  "firstName": "角栄",
+  "email": "tanaka@gmail.com",
+  "password": "password",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675479317819"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1675479317819"
+    }
+  },
+  "__v": 0
+}]
