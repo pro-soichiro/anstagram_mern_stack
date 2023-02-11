@@ -1,11 +1,11 @@
 function requestErrorHandler(controller) {
-  return async function(req, res, next) {
+  return async function (req, res, next) {
     try {
       return await controller(req, res);
-    } catch(err) {
-      next(err)
+    } catch (err) {
+      next(err);
     }
-  }
+  };
 }
 
-export { requestErrorHandler }
+export { requestErrorHandler };

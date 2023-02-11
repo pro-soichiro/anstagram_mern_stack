@@ -6,8 +6,8 @@ import userApi from "../api/user";
 const User = () => {
   const { id } = useParams();
 
-  const [user, setUser] = useState({})
-  const [error, setError] = useState('')
+  const [user, setUser] = useState({});
+  const [error, setError] = useState("");
 
   useEffect(() => {
     userApi
