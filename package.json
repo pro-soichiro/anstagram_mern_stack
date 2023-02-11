@@ -68,6 +68,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
+    "start": "node server/app.mjs",
     "dev": "concurrently \"npm:dev:api\" \"npm:dev:client\"",
     "dev:api": "nodemon server/app.mjs",
     "dev:client": "node scripts/start.js",
