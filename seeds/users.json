@@ -26,8 +26,8 @@
   },
   "lastName": "間宮",
   "firstName": "漱一朗",
-  "lastNameKana": "そういちろう",
-  "firstNameKana": "まみや",
+  "lastNameKana": "まみや",
+  "firstNameKana": "そういちろう",
   "email": "soichiro@gmail.com",
   "password": "password",
   "department": "プロダクト開発",
@@ -48,8 +48,11 @@
   },
   "lastName": "田中",
   "firstName": "角栄",
-  "email": "tanaka@gmail.com",
+  "lastNameKana": "たなか",
+  "firstNameKana": "かくえい",
+  "email": "kakuei@gmail.com",
   "password": "password",
+  "department": "代表取締役",
   "createdAt": {
     "$date": {
       "$numberLong": "1675479276444"
@@ -65,10 +68,13 @@
   "_id": {
     "$oid": "63ddc915ebb6dba99b590c18"
   },
-  "lastName": "田中",
-  "firstName": "角栄",
-  "email": "tanaka@gmail.com",
+  "lastName": "佐藤",
+  "firstName": "優香",
+  "lastNameKana": "さとう",
+  "firstNameKana": "ゆうか",
+  "email": "yuka@gmail.com",
   "password": "password",
+  "department": "CS",
   "createdAt": {
     "$date": {
       "$numberLong": "1675479317819"
