@@ -7,7 +7,7 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 const HeaderContainer = styled.div`
   background-color: var(--a);
   width: 100%;
-`
+`;
 const StyledHeader = styled.header`
   max-width: 1300px;
   margin: 0 auto;
@@ -26,7 +26,7 @@ const Icon = styled.span`
   color: white;
   font-size: 30px;
   :hover {
-    color: var(--c)
+    color: var(--c);
   }
 `;
 
@@ -40,10 +40,10 @@ const Ul = styled.ul`
     line-height: 1.5;
     color: white;
     :hover {
-      color: var(--c)
+      color: var(--c);
     }
   }
-`
+`;
 
 const Header = () => {
   return (
@@ -58,13 +58,10 @@ const Header = () => {
           <nav>
             <Ul>
               <li>
-                <Link to="/users">ユーザー一覧</Link>
+                <Link to="/users">一覧</Link>
               </li>
               <li>
-                <Link to="/users">ユーザー一覧</Link>
-              </li>
-              <li>
-                <Link to="/users">ユーザー一覧</Link>
+                <Link to="/users/new">新規作成</Link>
               </li>
             </Ul>
           </nav>

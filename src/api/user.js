@@ -26,6 +26,10 @@ const userApi = {
     const result = await axios.get(ENDPOINT_URL + '/' + id);
     return result.data;
   },
+  async post(user) {
+    const result = await axios.post(ENDPOINT_URL, user)
+    return result.data;
+  }
 };
 
 export default userApi;

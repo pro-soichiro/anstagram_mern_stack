@@ -3,13 +3,18 @@ import { useEffect, useContext, createContext, useReducer } from "react";
 import userApi from "../api/user";
 
 const UserContext = createContext();
+const UserDispatchContext = createContext();
 
 const useUsers = () => useContext(UserContext);
+const useDispatchUsers = () => useContext(UserDispatchContext);
 
 const reducer = (users, action) => {
   switch (action.type) {
     case "user/init":
       return action.users;
+
+    case "user/add":
+      return [...users, action.user];
 
     default:
       return users;
@@ -25,7 +30,13 @@ const UserProvider = ({ children }) => {
     });
   }, []);
 
-  return <UserContext.Provider value={users}>{children}</UserContext.Provider>;
+  return (
+    <UserContext.Provider value={users}>
+      <UserDispatchContext.Provider value={dispatch}>
+        {children}
+      </UserDispatchContext.Provider>
+    </UserContext.Provider>
+  );
 };
 
-export { useUsers, UserProvider };
+export { useUsers, UserProvider, useDispatchUsers };

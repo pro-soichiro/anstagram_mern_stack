@@ -11,9 +11,11 @@ const userSchema = Schema({
   },
   lastNameKana: {
     type: String,
+    require: true,
   },
   firstNameKana: {
     type: String,
+    require: true,
   },
   email: {
     type: String,
@@ -25,6 +27,7 @@ const userSchema = Schema({
   },
   department: {
     type: String,
+    require: true,
   },
   joinedOn: {
     type: Date,
