@@ -1,7 +1,25 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
 
 import userApi from "../api/user";
+
+const Detail = styled.div`
+  margin: 16px auto;
+  padding: 24px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: var(--shadow-sp);
+`;
+
+const Error = styled.div`
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--red);
+`;
 
 const User = () => {
   const { id } = useParams();
@@ -23,83 +41,81 @@ const User = () => {
 
   return (
     <>
-      <div>
-        <div>{error}</div>
-        <h3>
-          {user.lastName} {user.firstName}
-        </h3>
+      <Detail>
+        <Error>{error}</Error>
         <p>
           {user.lastNameKana} {user.firstNameKana}
         </p>
+        <h3>
+          {user.lastName} {user.firstName}
+        </h3>
 
-        <div>
-          <div>Email</div>
-          <p>{user.email}</p>
-        </div>
+        <dl>
+          <dt>Email</dt>
+          <dd>{user.email}</dd>
+        </dl>
 
-        <div>
-          <div>部署</div>
-          <p>{user.department}</p>
-        </div>
+        <dl>
+          <dt>部署</dt>
+          <dd>{user.department}</dd>
+        </dl>
 
-        <div>
-          <div>入社日</div>
-          {/* <p>{user.joinedOn}</p> */}
-        </div>
+        <dl>
+          <dt>入社日</dt>
+          <dd>{user.joinedOn}</dd>
+        </dl>
 
-        <div>
-          <div>生年月日</div>
-          {/* <p>{user.bordOn}</p> */}
-        </div>
+        <dl>
+          <dt>生年月日</dt>
+          <dd>{user.bordOn}</dd>
+        </dl>
 
-        <div>
-          <div>出身地</div>
-          {/* <p>{user.birthplace}</p> */}
-        </div>
+        <dl>
+          <dt>出身地</dt>
+          <dd>{user.birthplace}</dd>
+        </dl>
 
-        <div>
-          <div>ニックネーム</div>
-          {/* <p>{user.nickname}</p> */}
-        </div>
+        <dl>
+          <dt>ニックネーム</dt>
+          <dd>{user.nickname}</dd>
+        </dl>
 
-        <div>
-          <div>特技</div>
-          {/* <p>{user.specialSkill}</p> */}
-        </div>
+        <dl>
+          <dt>特技</dt>
+          <dd>{user.specialSkill}</dd>
+        </dl>
 
-        <div>
-          <div>趣味</div>
-          {/* <p>{user.pastime}</p> */}
-        </div>
+        <dl>
+          <dt>趣味</dt>
+          <dd>{user.pastime}</dd>
+        </dl>
 
-        <div>
-          <div>座右の銘</div>
-          <dl>
-            {/* <dt>{user.motto.content}</dt> */}
-            {/* <dd>{user.motto.description}</dd> */}
-          </dl>
-        </div>
+        <dl>
+          <dt>座右の銘</dt>
+          {/* <dd>{user.motto.content}</dd> */}
+          {/* <dd>{user.motto.description}</dd> */}
+        </dl>
 
-        <div>
-          <div>経歴</div>
-          {/* <p>{user.career}</p> */}
-        </div>
+        <dl>
+          <dt>経歴</dt>
+          <dd>{user.career}</dd>
+        </dl>
 
-        <div>
-          <div>自己紹介</div>
-          {/* <p>{user.selfIntroduction}</p> */}
-        </div>
+        <dl>
+          <dt>自己紹介</dt>
+          <dd>{user.selfIntroduction}</dd>
+        </dl>
 
-        <div>
-          <div>作成日時</div>
-          {/* <p>{user.createdAt}</p> */}
-        </div>
+        <dl>
+          <dt>作成日時</dt>
+          <dd>{user.createdAt}</dd>
+        </dl>
 
-        <div>
-          <div>最終更新日時</div>
-          {/* <p>{user.updateAt}</p> */}
-        </div>
-      </div>
+        <dl>
+          <dt>最終更新日時</dt>
+          <dd>{user.updateAt}</dd>
+        </dl>
+      </Detail>
     </>
   );
 };
