@@ -4,6 +4,7 @@ import { UserProvider } from "./contexts/UserContext";
 import Home from "./pages/Home";
 import Users from "./pages/Users";
 import User from "./pages/User";
+import Page404 from "./pages/Page404";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/users" element={<Users />}></Route>
           <Route path="/users/:id" element={<User />}></Route>
+          <Route path="/*" element={<Page404 />}></Route>
         </Routes>
       </UserProvider>
     </BrowserRouter>
