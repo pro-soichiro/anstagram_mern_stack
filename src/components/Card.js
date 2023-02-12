@@ -6,7 +6,7 @@ const StyledCard = styled.div`
   padding: 10px;
   width: 330px;
   border-radius: 5px;
-  border: 2px solid var(--d);
+  border: 2px solid var(--light-gray);
   box-shadow: var(--shadow-sp);
   flex-basis: 330px;
   flex-shrink: 1;

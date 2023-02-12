@@ -1,10 +1,10 @@
 :root {
   --text: #454545;
   --link: #79a1d4;
-  --a: #64bcfc;
-  --b: #68c5f3;
-  --c: #454545;
-  --d: #dfdfdf;
+  --blue: #64bcfc;
+  --light-blue: #68c5f3;
+  --gray: #454545;
+  --light-gray: #dfdfdf;
   --red: #c93838;
   --white: white;
 
@@ -23,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: white;
+  background-color: var(--white);
   color: var(--text);
 }
 
@@ -92,12 +92,65 @@ li {
   transition: opacity 0.3s;
 }
 
+.btn.gray {
+  background-color: var(--gray);
+}
+
 .btn.blue {
-  background-color: var(--a);
+  background-color: var(--blue);
+}
+
+.btn.red {
+  background-color: var(--red);
 }
 
 .error-msg {
   margin-top: 5px;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--red);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.footer {
+  margin-top: 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  margin-top: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 27px 20px;
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: var(--shadow-sp);
+}
+
+.detail__btnToUsers {
+  margin-top: 32px;
+  text-align: center;
 }

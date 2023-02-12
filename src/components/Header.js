@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 const HeaderContainer = styled.div`
-  background-color: var(--a);
+  background-color: var(--blue);
   width: 100%;
 `;
 const StyledHeader = styled.header`
@@ -26,7 +26,7 @@ const Icon = styled.span`
   color: white;
   font-size: 30px;
   :hover {
-    color: var(--c);
+    color: var(--gray);
   }
 `;
 
@@ -40,7 +40,7 @@ const Ul = styled.ul`
     line-height: 1.5;
     color: white;
     :hover {
-      color: var(--c);
+      color: var(--gray);
     }
   }
 `;

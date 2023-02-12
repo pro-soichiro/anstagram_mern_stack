@@ -13,13 +13,15 @@ function App() {
     <BrowserRouter>
       <UserProvider>
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/users" element={<Users />}></Route>
-          <Route path="/users/new" element={<UserNew />}></Route>
-          <Route path="/users/:id" element={<User />}></Route>
-          <Route path="/*" element={<Page404 />}></Route>
-        </Routes>
+        <div id="container">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/users" element={<Users />}></Route>
+            <Route path="/users/new" element={<UserNew />}></Route>
+            <Route path="/users/:id" element={<User />}></Route>
+            <Route path="/*" element={<Page404 />}></Route>
+          </Routes>
+        </div>
       </UserProvider>
     </BrowserRouter>
   );

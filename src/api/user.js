@@ -29,7 +29,11 @@ const userApi = {
   async post(user) {
     const result = await axios.post(ENDPOINT_URL, user)
     return result.data;
-  }
+  },
+  async delete(user) {
+    const result = await axios.delete(ENDPOINT_URL + '/' + user._id);
+    return result.data;
+  },
 };
 
 export default userApi;

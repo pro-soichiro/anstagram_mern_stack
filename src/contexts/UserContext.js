@@ -16,6 +16,9 @@ const reducer = (users, action) => {
     case "user/add":
       return [...users, action.user];
 
+    case "user/delete":
+      return users.filter((_user) => _user._id !== action.user._id);
+
     default:
       return users;
   }
