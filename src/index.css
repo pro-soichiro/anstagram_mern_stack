@@ -5,6 +5,7 @@
   --light-blue: #68c5f3;
   --gray: #454545;
   --light-gray: #dfdfdf;
+  --orange: #F99F48;
   --red: #c93838;
   --white: white;
 
@@ -64,6 +65,13 @@ label {
 
 li {
   list-style: none;
+}
+
+input[type="submit"],
+input[type="button"],
+label,
+button {
+  cursor: pointer;
 }
 
 .container {
@@ -154,6 +162,10 @@ li {
 
 .btn.red {
   background-color: var(--red);
+}
+
+.btn.orange {
+  background-color: var(--orange);
 }
 
 .error-msg {

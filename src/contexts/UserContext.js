@@ -16,6 +16,13 @@ const reducer = (users, action) => {
     case "user/add":
       return [...users, action.user];
 
+    case "user/patch":
+      const updatedUsers = users.filter(
+        (_user) => _user._id !== action.user._id
+      );
+      updatedUsers.unshift(action.user);
+      return updatedUsers;
+
     case "user/delete":
       return users.filter((_user) => _user._id !== action.user._id);
 

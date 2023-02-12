@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import userApi from "../api/user";
 import { createPortal } from "react-dom";
 import DeleteModal from "../components/DeleteModal";
+import EditModal from "../components/EditModal";
 
 
 const ModalPortal = ({ children }) => {
@@ -29,6 +30,9 @@ const User = () => {
         setError("URLが不正です。");
       });
   }, [id]);
+
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const toggleEditModal = () => setIsEditModalOpen((prev) => !prev);
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const toggleDeleteModal = () => setIsDeleteModalOpen((prev) => !prev);
@@ -101,6 +105,9 @@ const User = () => {
         </dl>
 
         <div className="footer">
+          <Button className="orange" onClick={toggleEditModal}>
+            編集
+          </Button>
           <Button className="red" onClick={toggleDeleteModal}>
             削除
           </Button>
@@ -110,6 +117,12 @@ const User = () => {
       {isDeleteModalOpen && (
         <ModalPortal>
           <DeleteModal user={user} toggleDeleteModal={toggleDeleteModal} />
+        </ModalPortal>
+      )}
+
+      {isEditModalOpen && (
+        <ModalPortal>
+          <EditModal user={user} setUser={setUser} toggleEditModal={toggleEditModal} />
         </ModalPortal>
       )}
 

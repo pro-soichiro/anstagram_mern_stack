@@ -30,6 +30,10 @@ const userApi = {
     const result = await axios.post(ENDPOINT_URL, user)
     return result.data;
   },
+  async patch(user) {
+    const result = await axios.patch(ENDPOINT_URL + '/' + user._id, user);
+    return result.data;
+  },
   async delete(user) {
     const result = await axios.delete(ENDPOINT_URL + '/' + user._id);
     return result.data;
