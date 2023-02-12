@@ -1,28 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import styled from "styled-components";
 import Button from "../components/Button";
 
 import userApi from "../api/user";
 import { createPortal } from "react-dom";
 import DeleteModal from "../components/DeleteModal";
 
-const Detail = styled.div`
-  margin: 16px auto;
-  padding: 24px;
-  width: 100%;
-  max-width: 600px;
-  border-radius: 5px;
-  box-shadow: var(--shadow-sp);
-`;
-
-const Error = styled.div`
-  margin-top: 5px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--red);
-`;
 
 const ModalPortal = ({ children }) => {
   const target = document.querySelector("#container");
@@ -55,8 +38,8 @@ const User = () => {
 
   return (
     <>
-      <Detail>
-        <Error>{error}</Error>
+      <div className="detail">
+        <div className="error-msg text-center">{error}</div>
         <p>
           {user.lastNameKana} {user.firstNameKana}
         </p>
@@ -122,7 +105,7 @@ const User = () => {
             削除
           </Button>
         </div>
-      </Detail>
+      </div>
 
       {isDeleteModalOpen && (
         <ModalPortal>

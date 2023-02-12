@@ -1,73 +1,35 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
-const HeaderContainer = styled.div`
-  background-color: var(--blue);
-  width: 100%;
-`;
-const StyledHeader = styled.header`
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 10px;
-`;
-
-const HeaderInner = styled.div`
-  height: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const Icon = styled.span`
-  margin-left: 10px;
-  color: white;
-  font-size: 30px;
-  :hover {
-    color: var(--gray);
-  }
-`;
-
-const Ul = styled.ul`
-  display: flex;
-  align-items: center;
-  a {
-    padding: 0 12px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.5;
-    color: white;
-    :hover {
-      color: var(--gray);
-    }
-  }
-`;
-
 const Header = () => {
   return (
-    <HeaderContainer>
-      <StyledHeader>
-        <HeaderInner>
+    <div className="header__container">
+      <header className="header">
+        <div className="header__inner">
           <Link to="/">
-            <Icon>
+            <span className="header__icon">
               <FontAwesomeIcon icon={faHouse} />
-            </Icon>
+            </span>
           </Link>
           <nav>
-            <Ul>
+            <ul className="header__ul">
               <li>
-                <Link to="/users">一覧</Link>
+                <Link className="header__a" to="/users">
+                  一覧
+                </Link>
               </li>
               <li>
-                <Link to="/users/new">新規作成</Link>
+                <Link className="header__a" to="/users/new">
+                  新規作成
+                </Link>
               </li>
-            </Ul>
+            </ul>
           </nav>
-        </HeaderInner>
-      </StyledHeader>
-    </HeaderContainer>
+        </div>
+      </header>
+    </div>
   );
 };
 

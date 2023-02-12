@@ -71,6 +71,57 @@ li {
   margin: 0 auto;
 }
 
+.small-container {
+  margin: 10px auto;
+  padding: 24px;
+  max-width: 500px;
+  border: 1px solid var(--light-gray);
+  box-shadow: var(--shadow-sp);
+}
+
+.cards {
+  --card-width: 330px;
+  --gap: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.card {
+  display: inline-block;
+  padding: 10px;
+  width: 330px;
+  border-radius: 5px;
+  border: 2px solid var(--light-gray);
+  box-shadow: var(--shadow-sp);
+  flex-basis: 330px;
+  flex-shrink: 1;
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.card__name-kana {
+  font-size: 10px;
+  color: grey;
+  margin: 0;
+}
+
+.card__name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.card__description {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
 .page-title {
   font-size: 24px;
   font-weight: 700;
@@ -81,6 +132,7 @@ li {
 
 .btn {
   display: inline-block;
+  margin: 2px;
   padding: 16px;
   min-width: 140px;
   font-weight: 400;
@@ -116,6 +168,51 @@ li {
   text-align: center;
 }
 
+.header__container {
+  background-color: var(--blue);
+  width: 100%;
+}
+
+.header {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.header__inner {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__icon {
+  margin-left: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.header__icon:hover {
+  color: var(--gray);
+}
+
+.header__ul {
+  display: flex;
+  align-items: center;
+}
+
+.header__a {
+  padding: 0 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: white;
+}
+
+.header__a:hover {
+  color: var(--gray);
+}
+
 .footer {
   margin-top: 41px;
   display: flex;
@@ -144,8 +241,17 @@ li {
   margin-left: auto;
   padding: 27px 20px;
   width: 90%;
-  max-width: 600px;
+  max-width: 500px;
   background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: var(--shadow-sp);
+}
+
+.detail {
+  margin: 16px auto;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
   border-radius: 5px;
   box-shadow: var(--shadow-sp);
 }

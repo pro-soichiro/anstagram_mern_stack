@@ -50,7 +50,7 @@ const UserNew = () => {
   };
 
   return (
-    <>
+    <div className="small-container">
       <h2 className="page-title">新規ユーザー作成フォーム</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <InputUserLastName register={register} errors={errors} />
@@ -67,7 +67,7 @@ const UserNew = () => {
           <Button className="blue">追加する</Button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 
