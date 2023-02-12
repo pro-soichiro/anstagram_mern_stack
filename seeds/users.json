@@ -2,13 +2,13 @@
   "_id": {
     "$oid": "63ddc3d2bb5e6145934d0e11"
   },
-  "lastName": "鈴木",
+  "lastName": "桃",
   "firstName": "太郎",
-  "lastNameKana": "すずき",
+  "lastNameKana": "もも",
   "firstNameKana": "たろう",
   "email": "taro@gmail.com",
   "password": "password",
-  "department": "IS",
+  "department": "鬼退治",
   "createdAt": {
     "$date": {
       "$numberLong": "1675477970152"
@@ -16,32 +16,30 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1675479479003"
+      "$numberLong": "1676184936058"
     }
   },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "63ddc409bb5e6145934d0e15"
-  },
-  "lastName": "間宮",
-  "firstName": "漱一朗",
-  "lastNameKana": "まみや",
-  "firstNameKana": "そういちろう",
-  "email": "soichiro@gmail.com",
-  "password": "password",
-  "department": "プロダクト開発",
-  "createdAt": {
+  "__v": 0,
+  "birthplace": "おじいさんとおばあさんのいる村",
+  "bornOn": {
     "$date": {
-      "$numberLong": "1675478025330"
+      "$numberLong": "392688000000"
     }
   },
-  "updatedAt": {
+  "career": "川上で生まれる。桃に5年間勤務。おじいさんとおばあさんにヘッドハンティングされました。",
+  "joinedOn": {
     "$date": {
-      "$numberLong": "1675478025330"
+      "$numberLong": "746496000000"
     }
   },
-  "__v": 0
+  "motto": {
+    "content": "全集中",
+    "description": "集中は大事です。"
+  },
+  "nickname": "桃ちゃん",
+  "pastime": "鬼退治",
+  "selfIntroduction": "鬼を見かけたら教えてください。",
+  "specialSkill": "鬼退治"
 },{
   "_id": {
     "$oid": "63ddc8ec6fbd462255f06259"
@@ -52,7 +50,7 @@
   "firstNameKana": "かくえい",
   "email": "kakuei@gmail.com",
   "password": "password",
-  "department": "代表取締役",
+  "department": "DX",
   "createdAt": {
     "$date": {
       "$numberLong": "1675479276444"
@@ -60,10 +58,30 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1675479276444"
+      "$numberLong": "1676185120312"
     }
   },
-  "__v": 0
+  "__v": 0,
+  "birthplace": "新潟の山奥",
+  "bornOn": {
+    "$date": {
+      "$numberLong": "1676160000000"
+    }
+  },
+  "career": "出版社で働いていました〜",
+  "joinedOn": {
+    "$date": {
+      "$numberLong": "1676160000000"
+    }
+  },
+  "motto": {
+    "content": "〇〇になる男だ",
+    "description": "有言実行は難しいですが、大事ですね。"
+  },
+  "nickname": "かくちゃん",
+  "pastime": "酒・酒・酒",
+  "selfIntroduction": "仲良くしてください。",
+  "specialSkill": "ルービックキューブ"
 },{
   "_id": {
     "$oid": "63ddc915ebb6dba99b590c18"
@@ -82,7 +100,237 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1675479317819"
+      "$numberLong": "1676182650931"
+    }
+  },
+  "__v": 0,
+  "birthplace": "茨城県",
+  "bornOn": {
+    "$date": {
+      "$numberLong": "1644624000000"
+    }
+  },
+  "career": "ダンススクール講師=>フリーランス",
+  "joinedOn": {
+    "$date": {
+      "$numberLong": "792547200000"
+    }
+  },
+  "motto": {
+    "content": "踊れ",
+    "description": "踊るのが好き"
+  },
+  "nickname": "ゆうか",
+  "pastime": "ジャズダンス",
+  "selfIntroduction": "踊りましょ！！",
+  "specialSkill": "ジャズダンス"
+},{
+  "_id": {
+    "$oid": "63e824bae0e4cd514d8092b1"
+  },
+  "lastName": "山本",
+  "firstName": "太郎",
+  "lastNameKana": "やまもと",
+  "firstNameKana": "たろう",
+  "email": "yamamoto.taro@gmail.com",
+  "password": "yamamotopass",
+  "department": "営業",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676158138271"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676184763945"
+    }
+  },
+  "__v": 0,
+  "birthplace": "神奈川県　湘南",
+  "bornOn": {
+    "$date": {
+      "$numberLong": "548467200000"
+    }
+  },
+  "career": "スーパー大学卒業後、ハイパー企業へ4年勤務。\nのちに、独立したがコロナで倒産してしまい、今に至る。",
+  "joinedOn": {
+    "$date": {
+      "$numberLong": "1539648000000"
+    }
+  },
+  "motto": {
+    "content": "犬も歩けば棒に当たる",
+    "description": "やっぱり当たると思います。"
+  },
+  "nickname": "太郎",
+  "pastime": "演説",
+  "selfIntroduction": "どうぞよろしくです！",
+  "specialSkill": "演説"
+},{
+  "_id": {
+    "$oid": "63e832f66a4576ed2de6c6cc"
+  },
+  "lastName": "山田",
+  "firstName": "英一",
+  "lastNameKana": "やまだ",
+  "firstNameKana": "ひでかず",
+  "email": "hide@gmail.com",
+  "password": "hidepass",
+  "department": "ゲーム部",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676161783002"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676185061774"
+    }
+  },
+  "__v": 0,
+  "birthplace": "岐阜",
+  "bornOn": {
+    "$date": {
+      "$numberLong": "1675209600000"
+    }
+  },
+  "career": "ゲーム作ってました。",
+  "joinedOn": {
+    "$date": {
+      "$numberLong": "1675814400000"
+    }
+  },
+  "motto": {
+    "content": "情けは人のためならず",
+    "description": "。。。"
+  },
+  "nickname": "かず",
+  "pastime": "ゲーム",
+  "selfIntroduction": "どうぞよろしくお願いいたします。",
+  "specialSkill": "ゲーム"
+},{
+  "_id": {
+    "$oid": "63e83536a3ed185d1ce3e5fd"
+  },
+  "lastName": "長谷川",
+  "firstName": "環",
+  "lastNameKana": "はせがわ",
+  "firstNameKana": "たまき",
+  "email": "tamaki@gmail.com",
+  "password": "tamakipass",
+  "department": "CS",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676162358700"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676185165015"
+    }
+  },
+  "__v": 0,
+  "joinedOn": {
+    "$date": {
+      "$numberLong": "1675814400000"
+    }
+  },
+  "birthplace": "鹿児島",
+  "bornOn": {
+    "$date": {
+      "$numberLong": "582076800000"
+    }
+  },
+  "career": "ホテルで働いていました。",
+  "nickname": "たまちゃん",
+  "pastime": "読書・柔軟",
+  "specialSkill": "開脚（体が柔らかいです）",
+  "selfIntroduction": "カフェとか行きたいです！",
+  "motto": {
+    "content": "準備とは全ての言い訳を排除すること",
+    "description": "一郎の言葉"
+  }
+},{
+  "_id": {
+    "$oid": "63e844fc4bc5a59333d8fc69"
+  },
+  "lastName": "平田",
+  "firstName": "智也",
+  "lastNameKana": "ひらた",
+  "firstNameKana": "ともや",
+  "email": "tomoya@gmail.com",
+  "password": "tomoyapass",
+  "department": "情報システム",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676166396749"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676175481805"
+    }
+  },
+  "__v": 0,
+  "joinedOn": {
+    "$date": {
+      "$numberLong": "1675209600000"
+    }
+  },
+  "bornOn": {
+    "$date": {
+      "$numberLong": "898819200000"
+    }
+  },
+  "birthplace": "東京",
+  "nickname": "ひらひら",
+  "specialSkill": "けん玉",
+  "pastime": "マラソン",
+  "career": "けい",
+  "motto": {
+    "content": "座右",
+    "description": "めい"
+  },
+  "selfIntroduction": "hello"
+},{
+  "_id": {
+    "$oid": "63e884b288c754ea982414d4"
+  },
+  "lastName": "岡部",
+  "firstName": "正樹",
+  "lastNameKana": "おかべ",
+  "firstNameKana": "まさき",
+  "email": "okabe@sample.com",
+  "password": "okaoka",
+  "department": "専属バリスタ",
+  "joinedOn": {
+    "$date": {
+      "$numberLong": "1423699200000"
+    }
+  },
+  "bornOn": {
+    "$date": {
+      "$numberLong": "699580800000"
+    }
+  },
+  "birthplace": "埼玉",
+  "nickname": "おかぴー",
+  "specialSkill": "ドリップ",
+  "pastime": "ゲーム",
+  "motto": {
+    "content": "親父にも打たれたことないのに",
+    "description": "ガンダム好きです。"
+  },
+  "career": "アジアバリスタ大会優勝🏆",
+  "selfIntroduction": "美味しいコーヒー淹れます",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676182706879"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676182830860"
     }
   },
   "__v": 0
