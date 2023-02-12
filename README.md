@@ -24,7 +24,7 @@ MONGO_URLというキーでMongoDBのDBキーを設定してください。
 
 2. 初期データの登録
 
-MongoDB compassなどで、seedsディレクトリのuser.jsonをimportしてください。
+MongoDB compassなどで、seedsディレクトリのusers.jsonをimportしてください。
 
 
 ### 起動手順
