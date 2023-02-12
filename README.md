@@ -20,7 +20,7 @@ cloneしてご自身の環境で起動することをお勧めします。
 1. MongoDBの環境変数を設定
 
 rootディレクトリに.envファイルを作成し、
-MONGO_URLというキーでMongoDBのDBキーを設定してください。
+MONGO_URIというキーでMongoDBのDBキーを設定してください。
 
 2. 初期データの登録
 
