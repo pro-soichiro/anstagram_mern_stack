@@ -45,7 +45,7 @@ const User = () => {
         console.log("error occured!", e);
         setError("URLが不正です。");
       });
-  }, []);
+  }, [id]);
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const toggleDeleteModal = () => setIsDeleteModalOpen((prev) => !prev);
