@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "../components/Button";
 
+import { strToDateAndFormat } from "../utils/dateFormatter";
+
 import userApi from "../api/user";
 import { createPortal } from "react-dom";
 import DeleteModal from "../components/DeleteModal";
 import EditModal from "../components/EditModal";
-
 
 const ModalPortal = ({ children }) => {
   const target = document.querySelector("#container");
@@ -60,48 +61,52 @@ const User = () => {
         </dl>
         <dl>
           <dt>入社日</dt>
-          <dd>{user.joinedOn}</dd>
+          <dd>
+            {user.joinedOn ? strToDateAndFormat(user.joinedOn, "/") : "未登録"}
+          </dd>
         </dl>
         <dl>
           <dt>生年月日</dt>
-          <dd>{user.bordOn}</dd>
+          <dd>
+            {user.bornOn ? strToDateAndFormat(user.bornOn, "/") : "未登録"}
+          </dd>
         </dl>
         <dl>
           <dt>出身地</dt>
-          <dd>{user.birthplace}</dd>
+          <dd>{user.birthplace || "未登録"}</dd>
         </dl>
         <dl>
           <dt>ニックネーム</dt>
-          <dd>{user.nickname}</dd>
+          <dd>{user.nickname || "未登録"}</dd>
         </dl>
         <dl>
           <dt>特技</dt>
-          <dd>{user.specialSkill}</dd>
+          <dd>{user.specialSkill || "未登録"}</dd>
         </dl>
         <dl>
           <dt>趣味</dt>
-          <dd>{user.pastime}</dd>
+          <dd>{user.pastime || "未登録"}</dd>
         </dl>
         <dl>
           <dt>座右の銘</dt>
-          {/* <dd>{user.motto.content}</dd> */}
-          {/* <dd>{user.motto.description}</dd> */}
+          <dd>{user.motto?.content || "未登録"}</dd>
+          <dd>説明: {user.motto?.description || "未登録"}</dd>
         </dl>
         <dl>
           <dt>経歴</dt>
-          <dd>{user.career}</dd>
+          <dd>{user.career || "未登録"}</dd>
         </dl>
         <dl>
           <dt>自己紹介</dt>
-          <dd>{user.selfIntroduction}</dd>
+          <dd>{user.selfIntroduction || "未登録"}</dd>
         </dl>
         <dl>
-          <dt>作成日時</dt>
-          <dd>{user.createdAt}</dd>
+          <dt>作成日</dt>
+          <dd>{strToDateAndFormat(user.createdAt, "/")}</dd>
         </dl>
         <dl>
-          <dt>最終更新日時</dt>
-          <dd>{user.updatedAt}</dd>
+          <dt>最終更新日</dt>
+          <dd>{strToDateAndFormat(user.updatedAt, "/")}</dd>
         </dl>
 
         <div className="footer">
@@ -122,7 +127,11 @@ const User = () => {
 
       {isEditModalOpen && (
         <ModalPortal>
-          <EditModal user={user} setUser={setUser} toggleEditModal={toggleEditModal} />
+          <EditModal
+            user={user}
+            setUser={setUser}
+            toggleEditModal={toggleEditModal}
+          />
         </ModalPortal>
       )}
 

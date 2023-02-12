@@ -1,14 +1,23 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
+import { strToDateAndFormat } from "../utils/dateFormatter";
+
 import {
   InputUserLastName,
   InputUserFirstName,
   InputUserFirstNameKana,
   InputUserLastNameKana,
-  InputUserEmail,
-  InputUserPassword,
   InputUserDepartment,
+  InputUserJoinedOn,
+  InputUserBornOn,
+  InputUserBirthplace,
+  InputUserNickname,
+  InputUserSpecialSkill,
+  InputUserPastime,
+  InputUserMotto,
+  InputUserCareer,
+  InputUserSelfIntroduction,
 } from "../components/forms";
 import Button from "../components/Button";
 
@@ -33,9 +42,17 @@ const EditModal = ({ user, setUser, toggleEditModal }) => {
       firstName: editedUser.firstName,
       lastNameKana: editedUser.lastNameKana,
       firstNameKana: editedUser.firstNameKana,
-      email: editedUser.email,
-      password: editedUser.password,
       department: editedUser.department,
+      joinedOn: editedUser.joinedOn && strToDateAndFormat(editedUser.joinedOn),
+      bornOn:  editedUser.bornOn && strToDateAndFormat(editedUser.bornOn),
+      birthplace:  editedUser.birthplace,
+      nickname:  editedUser.nickname,
+      specialSkill:  editedUser.specialSkill,
+      pastime:  editedUser.pastime,
+      content:  editedUser.motto.content,
+      description:  editedUser.motto.description,
+      career:  editedUser.career,
+      selfIntroduction:  editedUser.selfIntroduction,
     },
   });
 
@@ -44,14 +61,24 @@ const EditModal = ({ user, setUser, toggleEditModal }) => {
   const [error, setError] = useState("");
   const onSubmit = (inputs) => {
     const formedUser = {
-      _id: editedUser._id,
+      ...editedUser,
       lastName: inputs.lastName,
       firstName: inputs.firstName,
       lastNameKana: inputs.lastNameKana,
       firstNameKana: inputs.firstNameKana,
-      email: inputs.email,
-      password: inputs.password,
       department: inputs.department,
+      joinedOn: inputs.joinedOn,
+      bornOn: inputs.bornOn,
+      birthplace: inputs.birthplace,
+      nickname: inputs.nickname,
+      specialSkill: inputs.specialSkill,
+      pastime: inputs.pastime,
+      motto: {
+        content: inputs.content,
+        description: inputs.description,
+      },
+      career: inputs.career,
+      selfIntroduction: inputs.selfIntroduction,
     };
 
     userApi
@@ -70,30 +97,39 @@ const EditModal = ({ user, setUser, toggleEditModal }) => {
 
   return (
     <div className="modal-container">
-      <div className="modal">
-        <h3 className="page-title">
-          [ {user.lastName} {user.firstName} ]を編集
-        </h3>
-        <div className="error-msg text-center">{error}</div>
-
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <InputUserLastName register={register} errors={errors} />
-          <InputUserFirstName register={register} errors={errors} />
-          <InputUserLastNameKana register={register} errors={errors} />
-          <InputUserFirstNameKana register={register} errors={errors} />
-          <InputUserEmail register={register} errors={errors} />
-          <InputUserPassword register={register} errors={errors} />
-          <InputUserDepartment register={register} errors={errors} />
-
+      <div className="modal modal__edit">
+        <div className="modal__inner">
+          <h3 className="page-title">
+            [ {user.lastName} {user.firstName} ]を編集
+          </h3>
           <div className="error-msg text-center">{error}</div>
 
-          <div className="footer">
-            <Button className="gray" onClick={toggleEditModal}>
-              キャンセル
-            </Button>
-            <Button className="orange">更新</Button>
-          </div>
-        </form>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <InputUserLastName register={register} errors={errors} />
+            <InputUserFirstName register={register} errors={errors} />
+            <InputUserLastNameKana register={register} errors={errors} />
+            <InputUserFirstNameKana register={register} errors={errors} />
+            <InputUserDepartment register={register} errors={errors} />
+            <InputUserJoinedOn register={register} errors={errors} />
+            <InputUserBornOn register={register} errors={errors} />
+            <InputUserBirthplace register={register} errors={errors} />
+            <InputUserNickname register={register} errors={errors} />
+            <InputUserSpecialSkill register={register} errors={errors} />
+            <InputUserPastime register={register} errors={errors} />
+            <InputUserMotto register={register} errors={errors} />
+            <InputUserCareer register={register} errors={errors} />
+            <InputUserSelfIntroduction register={register} errors={errors} />
+
+            <div className="error-msg text-center">{error}</div>
+
+            <div className="footer">
+              <Button className="gray" onClick={toggleEditModal}>
+                キャンセル
+              </Button>
+              <Button className="orange">更新</Button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

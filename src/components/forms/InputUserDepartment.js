@@ -5,7 +5,7 @@ const InputUserDepartment = ({ register, errors }) => {
         部署
       </label>
       <input
-        type="department"
+        type="text"
         id="user-department"
         placeholder="部署"
         {...register("department", {

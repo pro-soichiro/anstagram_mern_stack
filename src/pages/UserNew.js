@@ -36,8 +36,24 @@ const UserNew = () => {
   });
 
   const onSubmit = (formInputs) => {
+    const formedUser = {
+      ...formInputs,
+      joinedOn: null,
+      bornOn: null,
+      birthplace: null,
+      nickname: null,
+      specialSkill: null,
+      pastime: null,
+      motto: {
+        content: null,
+        description: null,
+      },
+      career: null,
+      selfIntroduction: null,
+    };
+
     userApi
-      .post(formInputs)
+      .post(formedUser)
       .then((_newUser) => {
         dispatch({ type: "user/add", user: _newUser });
         reset();

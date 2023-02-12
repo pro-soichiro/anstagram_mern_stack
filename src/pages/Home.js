@@ -3,7 +3,7 @@ const Home = () => {
     <div className="container">
       <h1 className="page-title">anstagram</h1>
       <p className="text-center">
-        これはアン・コンサルティングで働くメンバーのプロフィール帳です！
+        これはアン・コンサルティングで働く<br/>メンバーのプロフィール帳です！
       </p>
     </div>
   );

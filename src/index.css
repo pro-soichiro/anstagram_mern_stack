@@ -49,6 +49,19 @@ textarea {
   padding: 0;
 }
 
+textarea {
+  padding: 10px;
+  width: 90%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 3;
+  color: var(--text);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  appearance: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -82,6 +95,7 @@ button {
 .small-container {
   margin: 10px auto;
   padding: 24px;
+  width: 80%;
   max-width: 500px;
   border: 1px solid var(--light-gray);
   box-shadow: var(--shadow-sp);
@@ -140,7 +154,7 @@ button {
 
 .btn {
   display: inline-block;
-  margin: 2px;
+  margin: 5px;
   padding: 16px;
   min-width: 140px;
   font-weight: 400;
@@ -248,10 +262,8 @@ button {
 }
 
 .modal {
-  margin-top: 16px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 27px 20px;
+  margin: 10px;
+  padding: 10px 20px 30px;
   width: 90%;
   max-width: 500px;
   background-color: var(--white);
@@ -259,16 +271,25 @@ button {
   box-shadow: var(--shadow-sp);
 }
 
+.modal__edit {
+  height: 90%;
+  overflow: scroll;
+}
+
+.modal__inner {
+  padding: 10px;
+}
+
 .detail {
   margin: 16px auto;
   padding: 24px;
-  width: 90%;
+  width: 80%;
   max-width: 500px;
   border-radius: 5px;
   box-shadow: var(--shadow-sp);
 }
 
 .detail__btnToUsers {
-  margin-top: 32px;
+  margin: 32px 0;
   text-align: center;
 }
